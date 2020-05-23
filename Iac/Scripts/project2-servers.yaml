@@ -55,13 +55,10 @@ Resources:
         Fn::Base64: !Sub |
           #!/bin/bash
           apt-get update -y
-          apt-get install apache2 -y
-          systemctl start apache2.service
-          apt-get install unzip awscli -y
-          cd /var/www/html
-          rm index.html
-          aws s3 cp s3://udacity-project2-demo-1/udacity.zip . #copy the wep app from s3 bucket
-          unzip -o udacity.zip
+          git clone https://github.com/AymanAzzam/Last-Project.git 	# Download the repo
+	  cd Last-Project
+	  sudo ./scripts/prerequisites.sh				# Install the dependencies
+	  docker build --tag todo-app .					# Build the Docker Image
       ImageId: ami-005bdb005fb00e791    #need to be edited to new one
       SecurityGroups:
       - Ref: WebServerSecGroup  #associate the web app with security group
