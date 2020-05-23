@@ -59,10 +59,10 @@ Resources:
         Fn::Base64: !Sub |
           #!/bin/bash
           apt-get update -y
-          git clone https://github.com/AymanAzzam/Last-Project.git 	# Download the repo
+          git clone https://github.com/AymanAzzam/Last-Project.git 				# Download the repo
 	  cd Last-Project
-	  sudo ./scripts/prerequisites.sh				# Install the dependencies
- 
+	  sudo ./scripts/prerequisites.sh							# Install the dependencies
+ 	  eksctl create cluster --name prod --version 1.16 --region us-west-2 --fargate		# Create cluster
       ImageId: ami-005bdb005fb00e791    #need to be edited to new one
       SecurityGroups:
       - Ref: WebServerSecGroup  #associate the web app with security group
