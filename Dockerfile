@@ -24,7 +24,7 @@ EXPOSE 1024
 
 ## Step 5:
 # Run app at container launch
-#CMD yarn serve --host  ec2-3-226-249-235.compute-1.amazonaws.com --disable-host-check --port 1024
-CMD yarn serve --port 1024
+CMD yarn serve --host  ec2-3-234-253-125.compute-1.amazonaws.com --disable-host-check --port 1024
+#CMD yarn serve --port 1024
 
 ENV DEBIAN_FRONTEND=teletype
