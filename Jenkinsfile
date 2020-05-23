@@ -1,4 +1,9 @@
 pipeline {
+     environment {
+    	registry = "aymanazzam07/todo-app"
+    	registryCredential = 'dockerhub'
+	dockerImage = ''
+     }
      agent none
     
      stages {
@@ -12,21 +17,19 @@ pipeline {
 		 '''
               }
          }
-	 stage('Build image') {
+	 stage('Build Image') {
 	      agent any
               steps {
-                 sh 'docker build --tag aymanazzam07/todo-app:latest .'
+                 dockerImage = docker.build registry + ":latest"
               }
          }
-	 stage('Push image') {
-	      agent any
-              steps {
-		 sh '''
-			docker push aymanazzam07/todo-app
-		 '''
-              }
-         }
-	 stage('Deploy container') {
+	 stage('Push Image') {
+  	      steps {    
+		script {
+      			docker.withRegistry( '', registryCredential ){ dockerImage.push() }
+    		}
+  	      }
+	 stage('Deploy Container') {
 	      agent any
               steps {
 		 sh 'kubectl run api --image=aymanazzam07/todo-app:latest --port=1024'
