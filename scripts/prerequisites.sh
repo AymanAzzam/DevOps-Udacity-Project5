@@ -44,3 +44,10 @@ sudo systemctl start jenkins
 # Enable the service to load during boot
 sudo systemctl enable jenkins
 sudo systemctl status jenkins
+
+# 6. Install kubectl
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+echo "Done curl"
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+kubectl version --client
