@@ -8,7 +8,7 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint"
-  },
+  }
   "dependencies": {
     "bulma": "^0.8.0",
     "core-js": "^3.4.4",
