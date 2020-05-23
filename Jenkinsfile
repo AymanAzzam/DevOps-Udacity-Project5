@@ -3,13 +3,9 @@ pipeline {
     
      stages {
          stage('Lint') {
-	      agent {
-		 docker {
-		 	image 'darrylb/jsonlint' 		  
-            		args '-u root:root'
-		 }		         
-      	      }
+	      agent any
               steps {
+		 sh 'npm install jsonlint -g'
                  sh 'jsonlint todo-app/*.json'
               }
          }
