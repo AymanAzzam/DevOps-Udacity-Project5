@@ -62,7 +62,7 @@ Resources:
           git clone https://github.com/AymanAzzam/Last-Project.git 	# Download the repo
 	  cd Last-Project
 	  sudo ./scripts/prerequisites.sh				# Install the dependencies
-	  docker build --tag todo-app .					# Build the Docker Image
+ 
       ImageId: ami-005bdb005fb00e791    #need to be edited to new one
       SecurityGroups:
       - Ref: WebServerSecGroup  #associate the web app with security group
