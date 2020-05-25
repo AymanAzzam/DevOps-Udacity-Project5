@@ -20,7 +20,9 @@ pipeline {
 	 stage('Build Image') {
 	      agent any
               steps {
-                 dockerImage = docker.build registry + ":latest"
+		      script {
+                 	dockerImage = docker.build registry + ":latest"
+		      }
               }
          }
 	 stage('Push Image') {
