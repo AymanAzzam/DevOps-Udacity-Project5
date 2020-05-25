@@ -55,6 +55,8 @@ $ sudo usermod -a -G docker jenkins
 $ sudo /etc/init.d/jenkins restart
 ```
 
+4. Create Jenkins credential with name dockerhub.
+
 ## Problems
 1. I can't archiveartifacts artifacts prefixes.
 
