@@ -61,4 +61,4 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 sudo mkdir -p /usr/local/bin/
 sudo install minikube /usr/local/bin/
 echo "Starting minikube cluster"
-minikube start
+minikube start -v=8
