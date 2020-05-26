@@ -1,5 +1,5 @@
 # Docker-in-Jenkins-Pipeline
-A pipeline using Jenkins to lint, build and push docker image for a NodeJS app called todo-app and I deployed it on AWS.
+A pipeline using Jenkins to lint, build and push a docker image for a NodeJS app called todo-app and I deployed it on AWS.
 
 ## PreRequisites 
 1. Docker.
