@@ -1,4 +1,5 @@
-# Todo App
+# Docker-in-Jenkins-Pipeline
+A pipeline using Jenkins with docker to lint, build and push docker image for a NodeJS app called todo-app and I deployed it on AWS.
 
 ## PreRequisites 
 1. Docker.
@@ -58,6 +59,4 @@ $ sudo /etc/init.d/jenkins restart
 4. Create Jenkins credential with name dockerhub.
 
 ## Problems
-1. I can't archiveartifacts artifacts prefixes.
-
-2. End-to-end testing fails in Jenkins with error: spawn Xvfb ENOENT jenkins.
+1. Kubernetes doesn't work in Jenkins Pipeline.
