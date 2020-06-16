@@ -2,7 +2,6 @@
 A pipeline using Jenkins to lint, build and push a docker image for a NodeJS app called todo-app and I deployed it on AWS.
 
 ## Table of Contents
-
 - [PreRequisites](#prerequisites)
 - [Run](#run)
 - [Jenkins](#jenkins)
