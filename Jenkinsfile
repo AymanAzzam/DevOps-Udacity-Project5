@@ -32,7 +32,7 @@ pipeline {
     		}
   	      }
 	 }
-	 stage('Deploy Container') {
+	 stage('Deploy Docker Container') {
 	      agent any
               steps {
 		 sh 'kubectl run api --image=aymanazzam07/todo-app:latest --port=1024 -v=8'
